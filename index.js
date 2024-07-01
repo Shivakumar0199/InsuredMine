@@ -8,14 +8,8 @@ const helmet = require("helmet");
 const bodyParser=require("body-parser");
 app.use(cors())
 app.use(express.json())
-
-
 const url = "mongodb+srv://shivad2727:8074938497$@cluster.brqvhkz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster";
-
 const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
-
-
-
 
 require("./ProjectRoute")(app);
 app.use(helmet());
@@ -27,7 +21,7 @@ app.use(
     })
 )
 
-app.listen(4100, async () => {
+app.listen(4000, async () => {
     try {
         await client.connect();
         console.log('Connected to MongoDB successfully!');
