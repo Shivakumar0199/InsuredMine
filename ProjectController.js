@@ -14,7 +14,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 //API to upload the attached XLSX/CSV into MongoDB
 exports.uploadData = async (req, res) => {
     try {
-        const file_path = "C:/Users/ashok/Downloads/data-sheet-Node-js-Assesment-_1_.xlsx";
+        const file_path = "path to excel file";
         const file = reader.readFile(file_path);
         let file_data = [];
         const sheets = file.Sheets[file.SheetNames];
